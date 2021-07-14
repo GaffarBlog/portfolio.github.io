@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+    scroll-behavior: smooth;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 222;
+    transition: 1s;
+}
+.navbar span{
+    display: none;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 61, 98, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+header #wrapper{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 222;
+}
+.navbar{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #30336b;
+    border-radius: 10px;
+    position: sticky; 
+	top: 0;
+	z-index: 999999;
+	
+}
+#logo{
+    width: 300px;
+    background: #686de0;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    z-index: 999;
+    
+
+}
+.navbar h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.navbar nav{
+    display: flex;
+    z-index: 999;
+}
+.navbar nav a{
+    color: #dbd8d8;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.4s ease all;
+    cursor: pointer;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.navbar nav a:last-child{
+    border-right: none;
+}
+.navbar nav a:hover{
+    color: white;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+.center{
+    text-align: center;
+    color: white;
+    padding: 15%;
+}
+.center p:first-child{
+    font-size: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.center h2{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.center p:last-child{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.center #hirebtn{
+    padding: 5px 20px;
+    font-size: 18px;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+}
+.center #hirebtn:hover{
+    background: white;
+    color: black;
+}
+
+/* service section styling strat */
+.service{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to left, #30336b, #686de0, #30336b);
+    /* background: #30336b; */
+}
+.service h1{
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-top: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.service .container{
+    position: absolute;
+    width: 80%;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.service .container .wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.service .container .indicator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+}
+.indicator .btn{
+    width: 15px;
+    height: 15px;
+    background: white;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+.indicator .active{
+    width: 35px;
+}
+.wrapper .slideRow{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: 1s ease all;
+}
+.service .container .wrapper .slideCol{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 15px;
+}
+.service .container .wrapper .serviceItem{
+    width: 30%;
+    height: 100%;
+    background: transparent;
+    position: relative;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0% 15% 0% 15% / 0% 15% 0% 15%;
+    transition: 0.3s ease all;
+}
+.service .container .wrapper .serviceItem:hover{
+    border: 2px solid white;
+}
+.service .container .wrapper .centerItem{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    
+}
+.centerItem img{
+    width: 70px;
+    margin-bottom: 15px;
+}
+.centerItem h2{
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin: 15px 0 ;
+
+}
+.centerItem p{
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin: 0 25px;
+
+}
+/* Client section start */
+#client1{
+    display: none;
+}
+.client{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/bg10.png);
+}
+.client .container{
+    position: absolute;
+    width: 80%;
+    height: 75vh;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.client .container .wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.client .container .indicator{
+    position: absolute;
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+}
+.client .indicator img{
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+}
+#prev{
+    transform: rotate(-90deg);
+}
+#next{
+    transform: rotate(90deg);
+}
+.client .container .slideRow{
+    width: 200%;
+    height: 100%;
+}
+.client .container .wrapper .slideCol{
+    width: 80%;
+    height: 100%;
+    padding: 5px 15px;
+}
+.overlay h1{
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.ourClient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clientCol img{
+    width: 100px;
+    border-radius: 20px;
+    margin-top: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.clientRow{
+    width: 80%;
+    height: 100%;
+}
+.fristRow{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.SecondtRow{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around; 
+}
+.clientCol{
+    width: 30%;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 42% 0% 40% 0% / 36% 0% 21% 0%;
+    transition: 0.4s ease all;
+}
+.clientCol:hover{
+    border: 2px solid #30336b;
+}
+.clientCol h4{
+    color: white;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.clientCol p{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 18px;
+}
+
+
+/* about section start */
+.about{
+    width: 100%;
+    height: 70vh;
+    background: transparent;
+    position: relative;
+}
+.about h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-top: 70px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about .myself{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.about .myself img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 2px white;
+    position: relative;
+}
+.about .myself .aboutMyself{
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    background: #30336b;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+.aboutMyself p{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+#aboutbg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../img/bg1.png);
+    background-size: cover;
+    z-index:-11;
+}
+/* about section end */
+/* contact section start */
+.contact{
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to bottom, #30336b, #30336bfa);
+    position: relative;
+}
+.contact h1{
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contactForm{
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form input, textarea{
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: 30px 0;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0 10px;
+    font-size: 18px;
+    background: transparent;
+    color: white;
+
+}
+textarea{
+    padding: 8px 10px;
+    height: 100px;
+}
+form input::placeholder{
+    color: white;
+}
+form input:focus{
+    border: 1px solid white;
+}
+form textarea:focus{
+    border: 1px solid white;
+}
+.submitdiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit{
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+#submit:hover{
+    color: #30336b;
+    background: white;
+}
+
+/* newsletter */
+#newsletter{
+    width: 100%;
+    height: 150px;
+    background: #34495e;
+    display: grid;
+    place-items: center;
+}
+#newsletter .wrap{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+#newsletter img{
+    width: 30px;
+}
+#newsletter input{
+    width: 90%;
+    height: 45px;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+#newsletter input::placeholder{
+    color: white;
+}
+#newsletter .searchicon{
+    width: 10%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border-left: 1px solid white;
+}
+/* footer section start */
+#footer{
+    width: 100%;
+    height: 40vh;
+    background: #222f3e;
+    position: relative;
+}
+.footerWrap{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footerCol{
+    width: 30%;
+    padding: 25px 15px;
+    text-align: center;
+}
+.footerCol h3{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+}
+.footerCol p{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.searchFooter{
+    width: 100%;
+    display: flex;
+    
+}
+.footerCol img{
+    width: 45px;
+}
+.searchicon img{
+    width: 30px;
+}
+.footerCol a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+}
+
+.footerCol input{
+    width: 85%;
+    height: 45px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    border: 1px solid white;
+    border-right: none;
+    background: transparent;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+.footerCol .searchicon{
+    width: 15%;
+    display: grid;
+    place-items: center;
+    border: 1px solid white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+.footerLine{
+    background: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #aboutbg{
+        display: none;
+    }
+    .navbar{
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        border-radius: 0; 
+        z-index: 999;
+
+    }
+    #cross{
+        display: none;
+    }
+    #open{
+        display: block;
+    }
+    .navbar span{
+        font-size: 22px;
+        color: white;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    #logo{
+        width: 200px;
+        background: none;
+    }
+    .navbar h2{
+        font-size: 20px;
+    }
+    .navbar nav{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 5px 0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: #30336b;
+        transform: translateX(-100%);
+        transition: 0.4s ease all;
+    }
+    .navbar nav a{
+        display: block;
+        color: white;
+        border: none;
+    }
+    
+    .navbar nav a:last-child{
+        border-right: none;
+    }
+
+
+
+
+
+    /* service */
+    .service{
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        background: linear-gradient(to left, #30336b, #686de0, #30336b);
+        /* background: #30336b; */
+    }
+    .service h1{
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        padding-top: 60px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .service .container{
+        position: absolute;
+        width: 100%;
+        height: 40vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+    .service .container .wrapper{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .service .container .indicator{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+    }
+    .indicator .btn{
+        width: 15px;
+        height: 15px;
+        background: white;
+        display: inline-block;
+        border-radius: 15px;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: 1s ease all;
+    }
+    .indicator .active{
+        width: 35px;
+    }
+    .wrapper .slideRow{
+        width: 300%;
+        height: 100%;
+        display: flex;
+        transition: 1s ease all;
+    }
+    .service .container .wrapper .slideCol{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 15px;
+    }
+    .service .container .wrapper .serviceItem{
+        width: 30%;
+        height: 100%;
+        background: transparent;
+        position: relative;
+        outline: none;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 0% 15% 0% 15% / 0% 15% 0% 15%;
+        transition: 0.3s ease all;
+    }
+    .service .container .wrapper .serviceItem:hover{
+        border: 2px solid white;
+    }
+    .service .container .wrapper .centerItem{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        
+    }
+    .centerItem img{
+        width: 40px;
+        margin-bottom: 15px;
+    }
+    .centerItem h2{
+        font-size: 15px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin: 15px 0 ;
+    
+    }
+    .centerItem p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin: 0;
+    
+    }
+    /* client */
+    .client{
+        display: none;
+    }
+    #client1{
+        display: block;
+        background: #130f40;
+        padding: 30px 0;
+    }
+    .clientdiv{
+        width: 100%;
+        height: 150px;
+        padding: 0 20px;
+        color: white;
+    }
+    .clientdiv img{
+        width: 100px;
+        float: left;
+        border-radius: 10px;
+
+    }
+    .clientdiv h4{
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-left: 120px;
+        padding-top: 10px;
+    }
+    .clientdiv p{
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 10px 0 0 120px;
+
+    }
+    /* about */
+    .about{   
+        height: 55vh;     
+        background: linear-gradient(to left, #30336b, #686de0, #30336b);
+    }
+    .about h2{
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .about .myself{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        padding-top: 70px;
+
+    }
+    .about .myself img{
+        width: 200px;
+        height: auto;
+    }
+    .about .myself .aboutMyself{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 290px;
+        left: 0;
+        transform: translateY(0);
+        display: block;
+        padding: 30px;
+    }
+    .aboutMyself p{
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    /* contact */
+    .contactForm{
+        width: 90%;
+    }
+    /* newlettere */
+    #newsletter .wrap{
+        width: 60%;
+    }
+    /* footer */
+    #footer{
+    width: 100%;
+    height: 40vh;
+}
+.footerWrap{
+    width: 90%;
+    height: 100%;
+    display: block;
+}
+.middle{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.footerCol{
+    width: 60%;
+    padding: 25px 15px;
+    text-align: center;
+    display: block;
+}
+.floatLeft{
+    float: left;
+    width: 50%;
+}
+.floatRight{
+    float: right;
+    width: 50%;
+}
+.footerCol h3{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+}
+.footerCol p{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.searchFooter{
+    width: 100%;
+    display: flex;
+    
+}
+.footerCol img{
+    width: 45px;
+}
+.searchicon img{
+    width: 30px;
+}
+.footerCol a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+}
+
+.footerCol input{
+    width: 85%;
+    height: 45px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    border: 1px solid white;
+    border-right: none;
+    background: transparent;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+.footerCol .searchicon{
+    width: 15%;
+    display: grid;
+    place-items: center;
+    border: 1px solid white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+.footerLine{
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+
+}
+
+.none{
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* about */
+    
+    .about{   
+        height: 80vh;
+    }
+    #newsletter .wrap{
+        width: 90%;
+    }
+    .contact{
+        height: 90vh;
+    }
+    #footer{
+        width: 100%;
+        height: 50vh;
+        background: #222f3e;
+    }
+
+}
